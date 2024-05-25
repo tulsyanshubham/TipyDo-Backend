@@ -9,4 +9,4 @@ const connectToMongo = async () => {
     await mongoose.connect(mongoURL).then(() => console.log("Connected to MongoDB Successfully"))
 }
 
-module.export = connectToMongo();
+module.exports = connectToMongo();

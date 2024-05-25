@@ -16,7 +16,7 @@ const fetchuser = require('./middleware/fetchuser');
 
 const secretKey = process.env.SECTET_KEY;
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const mailpsw = process.env.MAILPSW;
 const mailid = process.env.MAILID;
 
