@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 const { Schema } = mongoose;
 
 const employeeschema = new Schema({
@@ -56,11 +57,25 @@ const employeeschema = new Schema({
         type: String,
         require: true
     },
+    password: {
+        type: String,
+        require: true
+    },
     image: {
         //todo
         type: String,
         require: true
     },
 });
+
+// passord Hash
+employeeschema.pre('save', async function (next) {
+    if (this.isModified("password")) {
+        this.password = await bcrypt.hash(this.password, 10);
+        console.log(`Hashed Password : ${this.password}`);
+    }
+    next();
+})
+
 const Employee = mongoose.model('employee', employeeschema);
 module.exports = Employee;
