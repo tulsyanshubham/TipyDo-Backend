@@ -13,7 +13,7 @@ const managerschema = new Schema({
     },
     businesstype: {
         type: String,
-        enum: ['Hotel', 'Valets', 'Bars', 'Restaurants', 'Salons', 'Non-Profits'],
+        enum: ['Hotel', 'Valets', 'Bars', 'Restaurant', 'Salon', 'Non-Profit'],
         require: true,
     },
     date: {

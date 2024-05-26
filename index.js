@@ -36,9 +36,15 @@ const mailsend = (mail, psw) => {
         from: mailid,
         to: mail,
         subject: 'Sending Password for TipyDo',
-        html : `<h2>Congratulations on creating an account on <span style="color: green;">TipyDo !</span></h2>
-        <h4>Your Password:</h4>
-        <h1 style="color: green;">${psw}</h1>`
+        html : `<div style="position: inherit; padding: 20px; margin: 20px auto; width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); border: 1px solid #fbfbfb;">
+        <div style="text-align: center; padding-bottom: 0px;">
+            <h1>Welcome to <div style="color: green">TippDo!</div></h1>
+          	<h3>Your pssword is:</h3>
+          	<h1 style="color: green">${psw}</h1>
+          <h3><a href="https://tipydo.onrender.com/login/employee">Click here</a> to visit login page</h3>
+            <h5>Thank you for registering on our site. We're excited to have you with us.</h5>
+        </div>
+    </div>`
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
