@@ -41,7 +41,7 @@ const mailsend = (mail, psw) => {
             <h1>Welcome to <div style="color: green">TippDo!</div></h1>
           	<h3>Your pssword is:</h3>
           	<h1 style="color: green">${psw}</h1>
-          <h3><a href="https://tipydo.onrender.com/login/employee">Click here</a> to visit login page</h3>
+          <h3><a href="https://tipydo.onrender.com">Click here</a> to visit login page</h3>
             <h5>Thank you for registering on our site. We're excited to have you with us.</h5>
         </div>
     </div>`
