@@ -12,6 +12,7 @@ const Manager = require('./modals/manager')
 const Employee = require('./modals/employee');
 const Session = require('./modals/session');
 const Count = require('./modals/count');
+
 const fetchuser = require('./middleware/fetchuser');
 
 const secretKey = process.env.SECTET_KEY;
